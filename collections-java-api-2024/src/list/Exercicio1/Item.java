@@ -30,7 +30,7 @@ public class Item {
     @Override
     public String toString() {
         return "CarrinhoDeCompras{" +
-                "nome =' " + nome + '\'' +
+                "nome = " + nome + '\'' +
                 ", preco = " + preco +
                 ", quanridade = " + quanridade +
                 '}';
