@@ -9,49 +9,53 @@ public class CatalogoLivros {
     public CatalogoLivros() {
         this.livroList = new ArrayList<>();
     }
-    public void adicionarLivro(String titulo, String autor, int anoPublicacao){
+    public void adicionarLivro(String titulo, String autor, int anoPublicacao) {
         livroList.add(new Livro(titulo, autor, anoPublicacao));
     }
-    public List<Livro> pesquisarPorAutor(String autor){
+    public List<Livro> pesquisarPorAutor(String autor) {
         List<Livro> livroPorAutor = new ArrayList<>();
-        if (!livroList.isEmpty()){
-            for (Livro la: livroList) {
-                if (la.getAutor().equalsIgnoreCase(autor)){
-                    livroPorAutor.add(la);
+        if (!livroList.isEmpty()) {
+            for (Livro l : livroList) {
+                if (l.getAutor().equalsIgnoreCase(autor)) {
+                    livroPorAutor.add(l);
                 }
             }
             return livroPorAutor;
-        }else{
-            throw new RuntimeException("A lista esta vazia");
+        } else {
+            throw new RuntimeException("A lista está vazia!");
         }
     }
 
     public List<Livro> pesquisarPorIntervaloAnos(int anoInicial, int anoFinal) {
-        List<Livro> livrosPorIntervaloAnos = new ArrayList<>();
+        List<Livro> livroPorIntervaloAnos = new ArrayList<>();
         if (!livroList.isEmpty()){
-            for (Livro lia: livroList) {
-                if (lia.getAnoPublicacao() >= anoInicial && lia.getAnoPublicacao() <= anoFinal) {
-                    livrosPorIntervaloAnos.add(lia);
+            for (Livro l : livroList){
+                if (l.getAnoPublicacao() >= anoInicial && l.getAnoPublicacao() <= anoFinal){
+                    livroPorIntervaloAnos.add(l);
                 }
             }
-            return livrosPorIntervaloAnos;
-        }else{
-            throw new RuntimeException("A lista esta vazia");
-        }
-    }
+            return livroPorIntervaloAnos;
 
+        } else {
+            throw new RuntimeException("A lista está vazia!");
+        }
+
+    }
     public Livro pesquisarPorTitulo(String titulo) {
         Livro livroPorTitulo = null;
-        if (!livroList.isEmpty()){
-            for (Livro pt: livroList) {
-                if (pt.getTitulo().equalsIgnoreCase(titulo)) {
-                    livroPorTitulo = pt;
+        if (!livroList.isEmpty()) {
+            for (Livro l : livroList) {
+                if (l.getTitulo().equalsIgnoreCase(titulo)) {
+                    livroPorTitulo = l;
                     break;
                 }
             }
             return livroPorTitulo;
-        }else{
-            throw new RuntimeException("A lista esta vazia");
-        }
+
+       } else {
+        throw new RuntimeException("A lista está vazia!");
+       }
     }
 }
+
+

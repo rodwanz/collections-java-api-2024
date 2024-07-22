@@ -8,6 +8,7 @@ public class Teste {
         carrinhoDeCompras.adicionarItem("Lápis", 2d, 3);
         carrinhoDeCompras.adicionarItem("Lápis", 2d, 3);
         carrinhoDeCompras.adicionarItem("Caderno", 35d, 1);
+        carrinhoDeCompras.adicionarItem("Prancheta", 35d, 1);
         carrinhoDeCompras.adicionarItem("Borracha", 2d, 2);
 
         // Exibindo os itens no carrinho

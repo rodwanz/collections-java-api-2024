@@ -1,11 +1,11 @@
 package list.PesquisaComList;
 
 public class Livro {
-    private String autor;
     private String titulo;
+    private String autor;
     private int anoPublicacao;
 
-    public Livro(String autor, String titulo, int anoPublicacao) {
+    public Livro(String titulo, String autor, int anoPublicacao) {
         this.autor = autor;
         this.titulo = titulo;
         this.anoPublicacao = anoPublicacao;
