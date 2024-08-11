@@ -29,7 +29,7 @@ public class AgendaEventos {
             if (entry.getKey().isEqual(dataAtual) || entry.getKey().isAfter(dataAtual)){
                 proximaData = entry.getKey();
                 proximoEvento = entry.getValue();
-                System.out.println("O próximo evento:" + proximoEvento + "acontecera na data" + proximaData);
+                System.out.println("O próximo evento: " + proximoEvento + "acontecera na data " + proximaData);
                 break;
             }
         }

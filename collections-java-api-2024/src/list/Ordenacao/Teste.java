@@ -1,4 +1,4 @@
-package list.OrdenacaoList;
+package list.Ordenacao;
 
 public class Teste {
     public static void main(String[] args) {
